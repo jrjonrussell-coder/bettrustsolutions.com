@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prediction Markets: What Does Effective Integrity Monitoring Look Like? | BetTrust Solutions</title>
+<meta name="description" content="Polymarket wants to be taken seriously as a truth-telling mechanism. But accurate and clean are not the same thing. Jonathan Russell examines the Hayek problem, the manipulation threshold, and what an honest CFTC framework might actually require.">
+<meta name="keywords" content="prediction markets integrity, CFTC prediction markets, Polymarket regulation, betting integrity monitoring, prediction markets insider trading, sports betting integrity, political prediction markets, CFTC framework, betting market regulation, Jonathan Russell">
+<link rel="canonical" href="https://www.bettrustsolutions.com/blog-1.html">
+<meta property="og:title" content="Prediction Markets: What Does Effective Integrity Monitoring Look Like?">
+<meta property="og:description" content="Someone knows something. The only question is whether we're allowed to know who.">
+<meta property="og:url" content="https://www.bettrustsolutions.com/blog-1.html">
+<meta property="og:type" content="article">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Prediction Markets: What Does Effective Integrity Monitoring Look Like?",
+  "author": {
+    "@type": "Person",
+    "name": "Jonathan Russell"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "BetTrust Solutions",
+    "url": "https://www.bettrustsolutions.com"
+  },
+  "datePublished": "2026-03-21",
+  "description": "An examination of the structural integrity challenges facing prediction markets, the inadequacy of existing regulatory frameworks, and what honest oversight might actually require."
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a;
+    --navy-mid: #152234;
+    --silver: #c8d4e0;
+    --gold: #b8965a;
+    --gold-light: #d4ae72;
+    --off-white: #f0f4f8;
+    --text-muted: rgba(200,212,224,0.55);
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Jost', system-ui, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--navy);
+    color: var(--silver);
+    font-family: var(--font-body);
+    font-weight: 300;
+    line-height: 1.8;
+    min-height: 100vh;
+  }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(13,27,42,0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(184,150,90,0.15);
+    padding: 0 2rem;
+    height: 64px;
+    display: flex; align-items: center;
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto; width: 100%;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 0.75rem;
+    text-decoration: none;
+  }
+  .nav-brand {
+    font-family: var(--font-display);
+    font-size: 1.1rem; font-weight: 400;
+    color: var(--off-white); letter-spacing: 0.05em;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: var(--silver); text-decoration: none;
+    font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold-light); }
+  .article-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 120px 2rem 6rem;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    color: var(--gold); font-size: 0.78rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    text-decoration: none; margin-bottom: 3rem;
+    opacity: 0.8; transition: opacity 0.2s;
+  }
+  .back-link:hover { opacity: 1; }
+  .article-meta {
+    font-size: 0.75rem; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 1.25rem;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 300; color: var(--off-white);
+    line-height: 1.2; margin-bottom: 1.5rem;
+  }
+  .article-byline {
+    font-size: 0.82rem; color: var(--text-muted);
+    border-top: 1px solid rgba(200,212,224,0.1);
+    border-bottom: 1px solid rgba(200,212,224,0.1);
+    padding: 1rem 0; margin-bottom: 3rem;
+    letter-spacing: 0.05em;
+  }
+  .article-body p {
+    margin-bottom: 1.6rem;
+    font-size: 1.02rem;
+    color: var(--silver);
+  }
+  .article-body h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    font-weight: 400; color: var(--off-white);
+    margin: 3rem 0 1.25rem;
+    line-height: 1.3;
+  }
+  .article-body strong {
+    color: var(--off-white);
+    font-weight: 500;
+  }
+  .article-body em {
+    font-style: italic;
+    color: var(--off-white);
+  }
+  .article-body .pullquote {
+    border-left: 3px solid var(--gold);
+    padding: 0.5rem 0 0.5rem 1.75rem;
+    margin: 2.5rem 0;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--off-white);
+    line-height: 1.5;
+    font-style: italic;
+  }
+  .article-footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(200,212,224,0.1);
+  }
+  .author-bio {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+  .author-bio strong { color: var(--silver); }
+  footer {
+    border-top: 1px solid rgba(200,212,224,0.1);
+    padding: 2rem;
+    text-align: center;
+  }
+  .footer-inner {
+    display: flex; justify-content: space-between; align-items: center;
+    max-width: 1200px; margin: 0 auto;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-brand {
+    font-family: var(--font-display);
+    font-size: 1rem; color: var(--silver);
+    letter-spacing: 0.05em;
+  }
+  .footer-copy {
+    font-size: 0.75rem; color: var(--text-muted);
+    letter-spacing: 0.05em;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-brand">BetTrust Solutions</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#credentials">Credentials</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="blog.html">Writing</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="article-wrap">
+
+  <a href="blog.html" class="back-link">&larr; All writing</a>
+
+  <p class="article-meta">March 2026 &mdash; Regulation</p>
+  <h1>Prediction Markets: What Does Effective Integrity Monitoring Look Like?</h1>
+  <p class="article-byline">By Jonathan Russell &mdash; Sports Betting & Integrity Consultant</p>
+
+  <div class="article-body">
+
+    <p>When you watch a Polymarket contract on a political outcome — an election, a confirmation, a legislative vote — and the price moves sharply in the 48 hours before the announcement, the instinct of anyone who has spent time in regulated betting markets is immediate and unambiguous.</p>
+
+    <div class="pullquote">Someone knows something.</div>
+
+    <p>In any other regulated market that price movement triggers a surveillance alert. Positions are reviewed. Patterns are analysed. If it repeats, someone gets a letter from a regulator. The entire apparatus of market integrity exists to treat that moment as a problem to be investigated.</p>
+
+    <p>Polymarket's implicit answer is the opposite. That price movement is the product. It's the signal. It's what they're selling to the journalists, forecasters and political analysts who have started treating their charts as primary sources. The market knew before the polls did. The market knew before the news broke. Look how accurate it was.</p>
+
+    <p>But accurate and clean are not the same thing.</p>
+
+    <p>A market can be a perfect predictor and a perfect vehicle for converting private information into profit simultaneously. The accuracy doesn't launder the mechanism. And if the mechanism is — as it appears to be in at least some cases — participants with direct influence over or advance knowledge of the outcome taking positions before it resolves, then what Polymarket is selling as truth is something closer to a real-time readout of what powerful people know or intend.</p>
+
+    <p>Which might be useful. It might even be more useful than a poll. But it is not neutral. It is not clean. And it is not what a functioning integrity framework would permit in any other context.</p>
+
+    <p>So here is the question the CFTC needs to answer before it can build anything meaningful:</p>
+
+    <div class="pullquote">Is a market that derives its predictive accuracy partly from insider participation something we want to regulate into transparency — or something we want to regulate out of existence?</div>
+
+    <p>Because the answer to that question determines everything else. And right now, nobody in an official capacity appears to have asked it.</p>
+
+    <h2>The Hayek Problem — Or Why The Medicine Might Be The Poison</h2>
+
+    <p>Friedrich Hayek's insight was simple and devastating to central planning: no single actor can possess all the information dispersed across millions of individual minds. Prices, when allowed to move freely, aggregate that dispersed knowledge into a single signal. The trader who buys wheat futures because he knows there's a drought coming doesn't need to publish a report. He just buys. The price moves. The signal is transmitted. Society allocates resources accordingly.</p>
+
+    <p>Prediction markets are explicitly built on this logic. The serious academic argument for them is that when people with genuine knowledge have financial incentive to express it, prices become more accurate than any centralised forecasting mechanism. Polls ask people what they think. Prediction markets ask people to put money on it. Skin in the game filters out noise.</p>
+
+    <p>But the Hayekian framework quietly assumes something critical: that the knowledge being aggregated is <em>about</em> the event, not <em>determinative</em> of it. The wheat trader knows about the drought. He doesn't cause it. The information is exogenous to the outcome. The market is a telescope, not a lever.</p>
+
+    <p>Political prediction markets break this assumption completely.</p>
+
+    <p>When a senator takes a position on a contract resolving on their own vote, they are not expressing dispersed private knowledge about an external reality. They are, in the most literal sense possible, trading on information they will manufacture. The event and the participant are not separate. The observer and the observed are the same person.</p>
+
+    <p>And the problem cascades outward from there. The senator's chief of staff. The whip counting votes. The lobbyist who wrote the amendment and has been in the room all week. The donor who funded the campaign and gets the call before the press does. None of these people are outsiders with telescopes. They are all, to varying degrees, inside the mechanism.</p>
+
+    <p>The Hayekian defence of prediction markets — that they aggregate dispersed knowledge into accurate prices — is simultaneously true and irrelevant to the integrity question. Yes, the price moved because someone knew something. Yes, the price was right. The accuracy is real. But the knowledge wasn't dispersed. It was concentrated. And the people who held it profited from it in ways that would be straightforwardly illegal in any regulated securities market.</p>
+
+    <p>Hayek's price mechanism requires many people knowing small things. What political prediction markets actually run on, at least in part, is a few people knowing everything.</p>
+
+    <h2>The Manipulation Threshold — Where Does Information End And Interference Begin?</h2>
+
+    <p>In conventional betting integrity the line between informed participation and manipulation is analytically tractable, even when hard to prove in practice. Someone who bets on a match they know is fixed is on the wrong side of the line. Someone who bets on a team they believe is undervalued is on the right side. The distinction turns on whether the knowledge derives from corrupt interference with the event itself.</p>
+
+    <p>That framework has thirty years of jurisprudence, monitoring infrastructure and international cooperation behind it. It is imperfect. But the conceptual foundation is solid because the event and the market are genuinely separate. The match happens on a pitch. The bet happens in a book. Corruption is the illicit bridge between them.</p>
+
+    <p>In political prediction markets there is no bridge to corrupt because there is no separation to begin with.</p>
+
+    <p>Consider the spectrum. At one end: a retail participant who follows politics closely, forms a view and takes a position. Unambiguously clean. This is exactly the participation the market needs. At the other end: a legislator who decides how to vote, takes a large position before announcing, and profits on resolution. Most people's instinct — and it's the right instinct — is that something has gone wrong there, even if the existing legal framework struggles to say precisely what.</p>
+
+    <p>But between those poles there is an enormous grey territory that no existing framework has mapped.</p>
+
+    <p>What about the legislator who takes a position <em>before</em> deciding how to vote — is the market influencing the decision rather than reflecting it? What about the lobbyist whose position reflects their assessment of how effective their own lobbying has been? What about the intelligence contractor who trades on geopolitical contracts using analytical access that is nominally public but practically available only to a handful of people? What about the journalist who moves a market with a story they haven't published yet?</p>
+
+    <p>Each of these represents a different flavour of the same problem: the boundary between private knowledge, legitimate analysis and determinative influence is not a line. It's a gradient. And a regulatory framework that cannot locate itself on that gradient with some precision isn't a framework. It's a gesture.</p>
+
+    <p>The CFTC's current toolkit — derived from commodity and derivatives regulation — is designed to police the ends of that spectrum. Naked manipulation, false reporting, coordinated squeezes. It has almost nothing to say about the vast middle ground where prediction markets actually operate.</p>
+
+    <p>Which means that right now, in the absence of a framework that honestly acknowledges the gradient exists, the default position is permissiveness. Everything that isn't explicitly prohibited is permitted. And in a market where some of the most conflicted participants are the people who would need to pass the legislation to regulate it, permissiveness is not a neutral default. It is a choice with winners and losers.</p>
+
+    <h2>What A Disclosure Framework Might Actually Look Like — And Why It's Harder Than It Sounds</h2>
+
+    <p>The most intellectually honest regulatory response to this situation isn't to pretend the insider participation problem can be eliminated. It can't. Attempting to exclude all participants with material knowledge of political outcomes would either destroy the market's predictive function or drive it offshore — most likely both.</p>
+
+    <p>The honest response is to acknowledge that these markets are structurally different from both financial securities markets and conventional betting markets, and that any framework needs to be built from that acknowledgement rather than borrowed from adjacent regulatory regimes that don't fit.</p>
+
+    <p>What might that look like in practice?</p>
+
+    <p>Start with <strong>participant tiering and mandatory disclosure</strong>. Not exclusion — disclosure. Participants above a certain position threshold in contracts where they have a material conflict of interest should be required to register that conflict. A legislator trading on a vote. A campaign official trading on an election. A regulator trading on a policy decision. The position doesn't need to be prohibited. It needs to be visible. Disclosed conflicts in a public register attached to market data would allow researchers, journalists and other participants to contextualise price movements. It would also create a deterrent effect for the most egregious cases.</p>
+
+    <p>Then <strong>position limits calibrated to influence rather than wealth</strong>. Financial market position limits are typically set to prevent cornering — one actor accumulating enough of a market to move the price artificially. In prediction markets the relevant concern isn't wealth concentration, it's influence concentration. A senator with a modest position in a contract on their own vote has more market power than a hedge fund with a large position in the same contract, because the senator's action resolves the contract. Limits need to reflect that asymmetry.</p>
+
+    <p>Then <strong>market suspension triggers tied to material non-public information events</strong>. Conventional financial markets have circuit breakers tied to price movements. Prediction markets need something analogous tied to information events — scheduled votes, anticipated announcements, known decision points — where the probability of informed trading spikes sharply. Not permanent suspension. Temporary halt, enhanced reporting obligation, post-event review.</p>
+
+    <p>And underneath all of this, <strong>an honest statement of regulatory purpose</strong>. This is where the CFTC has been most evasive. Is the goal to make prediction markets fair? Accurate? Transparent? To prevent them from becoming vehicles for political profit? These are not the same goal and they are in partial tension with each other. A framework built to maximise accuracy looks different from a framework built to maximise fairness. The regulator needs to decide which it is optimising for — and be willing to say so publicly.</p>
+
+    <h2>The Question Underneath All Of This</h2>
+
+    <p>None of this is easy. Some of it may be jurisdictionally impossible given where Polymarket and its competitors are incorporated. Some of it will be lobbied against by the participants most in need of regulation. And some of it runs into the uncomfortable reality that the most conflicted actors in prediction markets on political outcomes are, by definition, the people with the most influence over the regulatory environment in which those markets operate.</p>
+
+    <p>The challenge for the CFTC is not technical. The monitoring tools exist. Position reporting exists. Disclosure frameworks exist. The challenge is conceptual — and it requires an admission that regulators have so far avoided making.</p>
+
+    <p>These markets are, in part, structurally insider-traded. That is not an accusation. It is a description of how they function and why they work. The question is not whether to eliminate that reality. The question is whether it can be acknowledged honestly, bounded appropriately, and made visible enough that the public understands what they are looking at when a price moves sharply the night before a vote.</p>
+
+    <p>Polymarket wants to be taken seriously as a truth-telling mechanism. Truth-telling mechanisms have obligations. They don't get to claim the credibility of accuracy while resisting the transparency that would allow that accuracy to be properly understood.</p>
+
+    <p>The CFTC has an opportunity — and arguably an obligation — to build a framework that takes prediction markets seriously enough to regulate them honestly. That means starting from where they actually are, not from where it would be convenient for them to be.</p>
+
+    <div class="pullquote">Someone knows something. The only question is whether we're allowed to know who.</div>
+
+  </div>
+
+  <div class="article-footer">
+    <p class="author-bio"><strong>Jonathan Russell</strong> is a sports betting and integrity consultant with 25+ years experience in regulated betting markets. He served three elected terms as Chair of the International Betting Integrity Association (IBIA), working with the IOC, UEFA and ITIA on global integrity frameworks. He advises operators, regulators and governing bodies on integrity governance, sportsbook trading and regulated market strategy. <a href="index.html#contact" style="color: var(--gold);">Get in touch.</a></p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-brand">BetTrust Solutions</span>
+    <span class="footer-copy">&copy; 2025 BetTrust Solutions. All rights reserved.</span>
+  </div>
+</footer>
+
+</body>
+</html>
