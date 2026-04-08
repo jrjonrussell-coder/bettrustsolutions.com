@@ -24,123 +24,36 @@
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  body {
-    background: var(--navy);
-    color: var(--silver);
-    font-family: var(--font-body);
-    font-weight: 300;
-    line-height: 1.7;
-    min-height: 100vh;
-  }
-  nav {
-    position: fixed; top: 0; left: 0; right: 0;
-    z-index: 100;
-    background: rgba(13,27,42,0.96);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(184,150,90,0.15);
-    padding: 0 2rem;
-    height: 64px;
-    display: flex; align-items: center;
-  }
-  .nav-inner {
-    max-width: 1200px; margin: 0 auto; width: 100%;
-    display: flex; align-items: center; justify-content: space-between;
-  }
-  .nav-logo {
-    display: flex; align-items: center; gap: 0.75rem;
-    text-decoration: none;
-  }
+  body { background: var(--navy); color: var(--silver); font-family: var(--font-body); font-weight: 300; line-height: 1.7; min-height: 100vh; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(13,27,42,0.96); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(184,150,90,0.15); padding: 0 2rem; height: 64px; display: flex; align-items: center; }
+  .nav-inner { max-width: 1200px; margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
   .nav-logo img { height: 36px; width: 36px; object-fit: cover; border-radius: 4px; }
-  .nav-brand {
-    font-family: var(--font-display);
-    font-size: 1.1rem; font-weight: 400;
-    color: var(--off-white); letter-spacing: 0.05em;
-  }
+  .nav-brand { font-family: var(--font-display); font-size: 1.1rem; font-weight: 400; color: var(--off-white); letter-spacing: 0.05em; }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a {
-    color: var(--silver); text-decoration: none;
-    font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
-    transition: color 0.2s;
-  }
+  .nav-links a { color: var(--silver); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
   .nav-links a:hover { color: var(--gold-light); }
   .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-  .page-header {
-    padding: 140px 0 60px;
-    border-bottom: 1px solid rgba(200,212,224,0.1);
-  }
-  .about-label {
-    font-size: 0.72rem; letter-spacing: 0.15em;
-    text-transform: uppercase; color: var(--gold);
-    margin-bottom: 1rem;
-  }
-  .divider {
-    width: 40px; height: 1px;
-    background: var(--gold); margin: 1rem 0 1.5rem;
-  }
-  h1 {
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 300; color: var(--off-white);
-    line-height: 1.2; margin-bottom: 1rem;
-  }
+  .page-header { padding: 140px 0 60px; border-bottom: 1px solid rgba(200,212,224,0.1); }
+  .about-label { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+  .divider { width: 40px; height: 1px; background: var(--gold); margin: 1rem 0 1.5rem; }
+  h1 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--off-white); line-height: 1.2; margin-bottom: 1rem; }
   .articles { padding: 4rem 0; }
-  .article-item {
-    border-left: 2px solid rgba(184,150,90,0.3);
-    padding: 0 0 3rem 2rem;
-    margin-bottom: 3rem;
-    transition: border-color 0.3s;
-  }
+  .article-item { border-left: 2px solid rgba(184,150,90,0.3); padding: 0 0 3rem 2rem; margin-bottom: 3rem; transition: border-color 0.3s; }
   .article-item:hover { border-color: var(--gold); }
-  .article-meta {
-    font-size: 0.75rem; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--gold);
-    margin-bottom: 0.75rem;
-  }
-  .article-title {
-    font-family: var(--font-display);
-    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
-    font-weight: 400; color: var(--off-white);
-    line-height: 1.3; margin-bottom: 1rem;
-    text-decoration: none; display: block;
-  }
+  .article-meta { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+  .article-title { font-family: var(--font-display); font-size: clamp(1.3rem, 2.5vw, 1.8rem); font-weight: 400; color: var(--off-white); line-height: 1.3; margin-bottom: 1rem; text-decoration: none; display: block; }
   .article-title:hover { color: var(--gold-light); }
-  .article-excerpt {
-    color: var(--silver); font-size: 0.95rem;
-    line-height: 1.7; margin-bottom: 1.25rem;
-    max-width: 680px;
-  }
-  .read-more {
-    color: var(--gold); font-size: 0.78rem;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(184,150,90,0.4);
-    padding-bottom: 2px;
-    transition: border-color 0.2s;
-  }
+  .article-excerpt { color: var(--silver); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.25rem; max-width: 680px; }
+  .read-more { color: var(--gold); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid rgba(184,150,90,0.4); padding-bottom: 2px; transition: border-color 0.2s; }
   .read-more:hover { border-color: var(--gold); }
-  footer {
-    border-top: 1px solid rgba(200,212,224,0.1);
-    padding: 2rem;
-    text-align: center;
-  }
-  .footer-inner {
-    display: flex; justify-content: space-between; align-items: center;
-    max-width: 1200px; margin: 0 auto;
-    flex-wrap: wrap; gap: 1rem;
-  }
-  .footer-brand {
-    font-family: var(--font-display);
-    font-size: 1rem; color: var(--silver);
-    letter-spacing: 0.05em;
-  }
-  .footer-copy {
-    font-size: 0.75rem; color: var(--text-muted);
-    letter-spacing: 0.05em;
-  }
+  footer { border-top: 1px solid rgba(200,212,224,0.1); padding: 2rem; text-align: center; }
+  .footer-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; gap: 1rem; }
+  .footer-brand { font-family: var(--font-display); font-size: 1rem; color: var(--silver); letter-spacing: 0.05em; }
+  .footer-copy { font-size: 0.75rem; color: var(--text-muted); letter-spacing: 0.05em; }
 </style>
 </head>
 <body>
-
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
@@ -161,19 +74,26 @@
     <p class="about-label">Writing</p>
     <div class="divider"></div>
     <h1>Longer thinking</h1>
-    <p style="color: var(--silver); max-width: 560px;">Analysis and commentary on betting integrity, trading markets and regulation — written from the inside.</p>
+    <p style="color: var(--silver); max-width: 560px;">Analysis and commentary on betting integrity, trading markets and regulation &mdash; written from the inside.</p>
   </div>
 </div>
 
 <section class="articles">
   <div class="container">
 
-            <div class="article-item">
-                          <p class="article-meta">March 2026 — Regulation & Safer Gambling</p>
-                          <a href="blog-2.html" class="article-title">Liberalisation, Channelization, and the Athlete</a>
-                          <p class="article-excerpt">The regulated industry's central argument for market liberalisation has never been that betting is inherently harmless. An examination of channelization, athlete welfare evidence, and what responsible product stewardship requires.</p>
-                          <a href="blog-2.html" class="read-more">Read the full piece →</a>
-                      </div>
+    <div class="article-item">
+      <p class="article-meta">April 2026 &mdash; Regulation &amp; Integrity</p>
+      <a href="blog-3.html" class="article-title">Prediction Markets in the UK: The UKGC Has Stated Its Position. The Hard Work Starts Now.</a>
+      <p class="article-excerpt">The UKGC classified prediction markets as gambling in February. Whether that position holds or faces legal challenge, the governance work needs to happen now. On what responsible prediction market operation in the UK actually requires &mdash; and why the operator that builds it first defines the category.</p>
+      <a href="blog-3.html" class="read-more">Read the full piece &rarr;</a>
+    </div>
+
+    <div class="article-item">
+      <p class="article-meta">March 2026 &mdash; Regulation &amp; Safer Gambling</p>
+      <a href="blog-2.html" class="article-title">Liberalisation, Channelization, and the Athlete</a>
+      <p class="article-excerpt">The regulated industry&rsquo;s central argument for market liberalisation has never been that betting is inherently harmless. An examination of channelization, athlete welfare evidence, and what responsible product stewardship requires.</p>
+      <a href="blog-2.html" class="read-more">Read the full piece &rarr;</a>
+    </div>
 
     <div class="article-item">
       <p class="article-meta">March 2026 &mdash; Regulation</p>
@@ -188,9 +108,8 @@
 <footer>
   <div class="footer-inner">
     <span class="footer-brand">BetTrust Solutions</span>
-    <span class="footer-copy">&copy; 2025 BetTrust Solutions. All rights reserved.</span>
+    <span class="footer-copy">&copy; 2026 BetTrust Solutions. All rights reserved.</span>
   </div>
 </footer>
-
 </body>
 </html>
