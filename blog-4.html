@@ -1,0 +1,171 @@
+html<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Crowd Knows: Why Prediction Markets Outperform Bookmakers | BetTrust Solutions</title>
+<meta name="description" content="Prediction markets processed $3.5 billion in volume during the 2024 US election. Most people citing them had no idea what they were looking at. A plain-English and academic analysis of how prediction markets work, why they beat bookmakers, and why the CFTC v. states legal battle keeps them in the news.">
+<meta name="keywords" content="prediction markets, Kalshi, Polymarket, CFTC, bookmakers, Betfair Exchange, wisdom of crowds, Kahneman Tversky, sports betting, betting integrity, Jonathan Russell, BetTrust Solutions">
+<link rel="canonical" href="https://www.bettrustsolutions.com/blog-4.html">
+<meta property="og:title" content="The Crowd Knows: Why Prediction Markets Outperform Bookmakers">
+<meta property="og:description" content="Prediction markets processed $3.5 billion in volume during the 2024 US election. Most people citing them had no idea what they were looking at.">
+<meta property="og:url" content="https://www.bettrustsolutions.com/blog-4.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Crowd Knows: Why Prediction Markets Outperform Bookmakers",
+  "author": { "@type": "Person", "name": "Jonathan Russell" },
+  "publisher": { "@type": "Organization", "name": "BetTrust Solutions", "url": "https://www.bettrustsolutions.com" },
+  "datePublished": "2026-04-13",
+  "description": "Prediction markets processed $3.5 billion in volume during the 2024 US election. Most people citing them had no idea what they were looking at."
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root { --navy: #0d1b2a; --navy-mid: #152234; --silver: #c8d4e0; --gold: #b8965a; --gold-light: #d4ae72; --off-white: #f0f4f8; --text-muted: rgba(200,212,224,0.55); --font-display: 'Cormorant Garamond', Georgia, serif; --font-body: 'Jost', system-ui, sans-serif; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--navy); color: var(--silver); font-family: var(--font-body); font-weight: 300; line-height: 1.8; min-height: 100vh; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(13,27,42,0.96); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(184,150,90,0.15); padding: 0 2rem; height: 64px; display: flex; align-items: center; }
+.nav-inner { max-width: 1200px; margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+.nav-brand { font-family: var(--font-display); font-size: 1.1rem; font-weight: 400; color: var(--off-white); letter-spacing: 0.05em; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: var(--silver); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
+.nav-links a:hover { color: var(--gold-light); }
+.article-wrap { max-width: 720px; margin: 0 auto; padding: 120px 2rem 6rem; }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--gold); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; margin-bottom: 3rem; opacity: 0.8; transition: opacity 0.2s; }
+.back-link:hover { opacity: 1; }
+.article-meta { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+h1 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 300; color: var(--off-white); line-height: 1.2; margin-bottom: 0.75rem; }
+.article-byline { font-size: 0.82rem; color: var(--text-muted); border-top: 1px solid rgba(200,212,224,0.1); border-bottom: 1px solid rgba(200,212,224,0.1); padding: 1rem 0; margin-bottom: 3rem; letter-spacing: 0.05em; }
+.article-body p { margin-bottom: 1.6rem; font-size: 1.02rem; color: var(--silver); }
+.article-body h2 { font-family: var(--font-display); font-size: clamp(1.3rem, 2.5vw, 1.8rem); font-weight: 400; color: var(--off-white); margin: 3rem 0 1.25rem; line-height: 1.3; }
+.article-body strong { color: var(--off-white); font-weight: 500; }
+.article-body em { font-style: italic; color: var(--off-white); }
+.article-body .pullquote { border-left: 3px solid var(--gold); padding: 0.5rem 0 0.5rem 1.75rem; margin: 2.5rem 0; font-family: var(--font-display); font-size: 1.25rem; color: var(--off-white); line-height: 1.5; font-style: italic; }
+.article-footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(200,212,224,0.1); }
+.author-bio { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
+.author-bio strong { color: var(--silver); }
+footer { border-top: 1px solid rgba(200,212,224,0.1); padding: 2rem; text-align: center; }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; gap: 1rem; }
+.footer-brand { font-family: var(--font-display); font-size: 1rem; color: var(--silver); letter-spacing: 0.05em; }
+.footer-copy { font-size: 0.75rem; color: var(--text-muted); letter-spacing: 0.05em; }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="nav-brand">BetTrust Solutions</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#credentials">Credentials</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="blog.html">Writing</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="article-wrap">
+  <a href="blog.html" class="back-link">&larr; All writing</a>
+  <p class="article-meta">April 2026 &mdash; Market Structure</p>
+  <h1>The Crowd Knows: Why Prediction Markets Outperform Bookmakers</h1>
+  <p class="article-byline">By Jonathan Russell &mdash; Sports Betting &amp; Integrity Consultant</p>
+  <div class="article-body">
+
+<p>Prediction markets processed over $3.5 billion in volume during the 2024 US election cycle. Financial journalists cited Polymarket prices alongside polling aggregators. Political analysts used them as a live probability feed. Sports commentators referenced them as if they were fact. The attention is not accidental, and it is not going away. But most people quoting prediction market prices have only a partial understanding of what those prices actually represent, how they are produced, and where they break down. That gap matters, because a number misread is worse than no number at all.</p>
+
+<h2>The Aggregation Mechanism</h2>
+
+<p>A prediction market works by allowing participants to buy or sell contracts tied to binary outcomes. A contract pays &pound;1 if an event occurs, &pound;0 if it does not. Its price at any moment is the market&rsquo;s best estimate of the probability of that outcome. Participants who believe the true probability exceeds the contract price buy; those who believe the opposite sell. Price moves until the marginal buyer and seller agree.</p>
+
+<p>This is not a poll. It is not a forecast from a single analyst. It is a continuous, incentivised process in which every participant stakes capital on their belief. The price that emerges reflects the weighted aggregate of all available private and public information held by all participants, weighted by their willingness to back that belief financially.</p>
+
+<p>The theoretical foundation is Hayek&rsquo;s 1945 insight: that knowledge in a society is dispersed across individuals, and that prices are the mechanism by which dispersed knowledge is coordinated without any central authority needing to possess it. A bookmaker is a central authority. A prediction market is a price discovery mechanism. The distinction is not semantic. It determines whether the resulting number is a liability management tool or a genuine probability estimate.</p>
+
+<h2>Wisdom of the Crowd</h2>
+
+<p>Galton&rsquo;s 1907 observation at a livestock fair established the empirical basis for what became known as the wisdom of crowds. The median estimate of 800 individuals for the weight of an ox was accurate to within 0.8% of the true value, outperforming the majority of individual guesses. The key condition was that errors were independent. When individuals have diverse, uncorrelated information and their errors do not systematically bias in the same direction, aggregation reduces noise while preserving signal.</p>
+
+<p>Surowiecki formalised the conditions under which crowds produce superior judgements: diversity of opinion, independence of participants, decentralisation, and an aggregation mechanism. Prediction markets satisfy all four. Bookmaker markets satisfy none of them. The bookmaker&rsquo;s opening line originates from a small team of traders, updated by volume signals rather than by integrating participant belief.</p>
+
+<p>The empirical record supports this. Research comparing political prediction markets (Iowa Electronic Markets, PredictIt, Polymarket) to polling aggregators consistently finds that markets produce better-calibrated probability estimates, particularly as the event approaches. Tetlock&rsquo;s superforecaster research confirms that structured aggregation of calibrated individual forecasts outperforms institutional consensus. Prediction markets operationalise that aggregation continuously and in real time.</p>
+
+<p>The conditions under which crowd aggregation succeeds are, however, specific. Kahneman and Tversky (1974) documented the systematic heuristics through which individuals deviate from rational probability assessment: representativeness, which causes outcomes consistent with vivid recent narratives to be overweighted; availability, which causes easily recalled events to be judged more probable than base rates support; and anchoring, which causes insufficient adjustment from initial reference points. Where prediction market participants share these biases, which they do when they are exposed to the same information environment, errors are correlated rather than independent, and the aggregation mechanism does not cancel them out. Tversky and Kahneman (1992) further demonstrated that individuals systematically overweight small probabilities and underweight large ones, producing a predictable pattern of mispricing at the distributional tails. Prediction markets are more efficient than bookmaker markets, but they are not immune to systematic bias when the crowd&rsquo;s errors move in the same direction.</p>
+
+<h2>Information Efficiency</h2>
+
+<p>The efficient markets hypothesis, in its semi-strong form, holds that prices incorporate all publicly available information. Prediction markets add a further mechanism: they provide incentives for the acquisition of private information. A participant who invests effort in researching an outcome that others have not yet analysed can profit from that edge. This creates a market for information production, not merely information reflection.</p>
+
+<p>Bookmakers do not reward information production in this way. They set a price and manage exposure. When sharp money moves a bookmaker line, the bookmaker typically restricts the account rather than updating the price to reflect the new information. The information is suppressed, not incorporated.</p>
+
+<p>Betfair Exchange is the partial exception in the betting world precisely because it operates as a two-sided market. The closing line on Betfair is the closest analogue to a prediction market price that exists in sports betting. It is the benchmark against which model performance is properly evaluated, for this reason.</p>
+
+<h2>The Cost of Excluding Informed Participants</h2>
+
+<p>The bookmaker incentive to restrict sharp money has been documented empirically. Levitt (2004) demonstrated that bookmakers behave less like neutral market makers and more like position-takers against their customer base, setting prices to exploit systematic bettor bias. Restricting accounts that consistently correct mispricing is rational within that model: informed flow is a cost, not a contribution.</p>
+
+<p>Glosten and Milgrom (1985) showed, in the context of financial markets, that excluding informed order flow degrades the information content of prices rather than stabilising them. The sports betting application is direct: a bookmaker that closes winning accounts retains volume but progressively worsens its own price accuracy. Franck et al. (2010) confirmed this empirically, finding that prediction markets produce materially better-calibrated probability estimates than bookmaker markets, a gap they attribute in part to the structural difference in how each treats informed participants.</p>
+
+<p>The irony is compounding. A recreational bookmaker that restricts sharp money believes it is protecting its margin. In practice, it is removing the mechanism by which its prices stay accurate. The prices that remain are shaped increasingly by recreational volume, which is systematically biased toward popular teams, narrative-driven outcomes, and recency effects. The bookmaker&rsquo;s edge over its remaining customer base may persist, but its prices become progressively less reflective of true probability. It is optimising for short-term margin at the cost of long-run market integrity.</p>
+
+<div class="pullquote">A market that excludes informed participants does not become more stable. It becomes less informative.</div>
+
+<h2>Integrity and the Incentive Structure</h2>
+
+<p>Prediction markets have an integrity property that bookmakers lack by design. In a bookmaker market, the operator profits regardless of outcome accuracy; margin is extracted from volume. In a prediction market, accuracy matters because inaccurate prices create arbitrage opportunities that informed participants exploit until the price corrects. The market is self-correcting in a way that a bookmaker&rsquo;s posted price is not.</p>
+
+<p>This self-correction is not without limit. Thin markets with low liquidity are susceptible to manipulation, since the capital required to move prices is small relative to the potential gain from a correlated position. The integrity of prediction markets is therefore a function of liquidity depth. Shallow markets aggregate poorly and correct slowly.</p>
+
+<p>The regulatory treatment of prediction markets has historically been inconsistent, particularly in the United Kingdom, where the distinction between a spread bet, a financial contract, and a prediction market contract has been contested territory. The FCA and the Gambling Commission have overlapping and sometimes conflicting jurisdiction. This has suppressed the development of liquid, regulated prediction markets in the UK relative to the United States, where the CFTC-regulated Kalshi and the offshore Polymarket have demonstrated significant market depth in political and macroeconomic event contracts.</p>
+
+<h2>Why They Are in the News Every Week: The CFTC v. States Battle</h2>
+
+<p>The legal fight is the reason prediction markets appear in the news constantly. Kalshi holds a CFTC licence as a designated contract market. Its argument is straightforward: the Commodity Exchange Act gives the CFTC exclusive jurisdiction over designated contract markets, which means no state can regulate or restrict what it offers. One federal rulebook, not fifty state gambling regimes.</p>
+
+<p>States have taken a different view. Nevada, New Jersey, Maryland, Massachusetts, and New York have all issued cease-and-desist orders or initiated litigation. Their position is that whatever Kalshi calls its products, they function as sports bets, and states have always regulated gambling. A federal derivatives licence does not override that authority.</p>
+
+<p>The courts are split. Nevada and New Jersey federal courts initially sided with Kalshi, finding that the CEA preempts state law. Maryland and Massachusetts sided with the states. The Nevada decision was later partially reversed when the court found that Kalshi&rsquo;s expanded sports products, specifically prebuilt parlays and player-prop-style markets, are not swaps under the CEA. The cases are heading toward circuit courts, and the trajectory points toward the Supreme Court.</p>
+
+<p>The regulatory environment shifted materially in December 2025 when Michael Selig was confirmed as CFTC chairman. In his first public remarks he withdrew a proposed ban on sports and political contracts and announced new rulemaking to establish clear federal standards. The CFTC is explicitly backing prediction markets as legitimate price discovery mechanisms. That signal has not ended state resistance. Days before the Super Bowl, New York Attorney General Letitia James issued a public warning to New Yorkers about prediction markets, characterising them as bets masquerading as event contracts.</p>
+
+<p>What is at stake is significant. If the federal preemption argument wins, a single CFTC licence unlocks the entire US market. Combined Kalshi and Polymarket volumes ran at approximately $30 billion in 2025, growing rapidly. If states prevail, the model fragments, costs multiply, and the information aggregation properties that make prediction markets valuable are undermined by a patchwork of inconsistent jurisdictional restrictions.</p>
+
+<h2>What This Means in Practice</h2>
+
+<p>For a practitioner evaluating model output against market prices, the relevant question is whether the market price being compared is genuinely information-aggregating or merely bookmaker-managed. A recreational bookmaker&rsquo;s outright price and a Betfair Exchange closing price are not epistemically equivalent. The former reflects a trader&rsquo;s view plus margin plus liability management, increasingly shaped by recreational flow from which sharp correction has been excluded. The latter reflects the aggregated capital-weighted belief of all participants, corrected continuously by anyone with an informational edge and the willingness to deploy it.</p>
+
+<p>Prediction markets are not perfect. They require liquidity to function well, they can be slow to incorporate private information in early trading, and they are subject to sentiment effects in low-information environments. What they are, relative to bookmaker prices, is structurally more honest about what they are: an aggregated probability estimate, rather than a margin-adjusted liability management tool that degrades further each time an informed account is shown the door.</p>
+
+<p>The current attention paid to prediction markets is warranted. They represent a genuine advance in how distributed information can be converted into a probability estimate. Reading them correctly, however, requires understanding their architecture, their conditions for success, and the specific ways in which they fail. A number without that context is not insight. It is noise with a decimal point.</p>
+
+<h2>References</h2>
+
+<p>Franck, E., Verbeek, E. and N&uuml;esch, S. (2010). &ldquo;Prediction accuracy of different market structures: bookmakers versus a prediction market.&rdquo; <em>International Journal of Forecasting</em>, 26(3), pp.448&ndash;459.</p>
+<p>Glosten, L.R. and Milgrom, P.R. (1985). &ldquo;Bid, ask and transaction prices in a specialist market with heterogeneously informed traders.&rdquo; <em>Journal of Financial Economics</em>, 14(1), pp.71&ndash;100.</p>
+<p>Hayek, F.A. (1945). &ldquo;The use of knowledge in society.&rdquo; <em>American Economic Review</em>, 35(4), pp.519&ndash;530.</p>
+<p>Kahneman, D. (2011). <em>Thinking, Fast and Slow</em>. Farrar, Straus and Giroux.</p>
+<p>Kahneman, D. and Tversky, A. (1974). &ldquo;Judgment under uncertainty: heuristics and biases.&rdquo; <em>Science</em>, 185(4157), pp.1124&ndash;1131.</p>
+<p>Levitt, S.D. (2004). &ldquo;Why are gambling markets organised so differently from financial markets?&rdquo; <em>The Economic Journal</em>, 114(495), pp.223&ndash;246.</p>
+<p>Surowiecki, J. (2004). <em>The Wisdom of Crowds</em>. Doubleday.</p>
+<p>Tetlock, P.E. and Gardner, D. (2015). <em>Superforecasting: The Art and Science of Prediction</em>. Crown Publishers.</p>
+<p>Tversky, A. and Kahneman, D. (1992). &ldquo;Advances in prospect theory: cumulative representation of uncertainty.&rdquo; <em>Journal of Risk and Uncertainty</em>, 5(3), pp.297&ndash;323.</p>
+
+  </div>
+  <div class="article-footer">
+    <p class="author-bio"><strong>Jonathan Russell</strong> is a sports betting and integrity consultant with 30 years of experience in regulated betting markets. He served three elected terms as Non-Executive Chair of the International Betting Integrity Association (IBIA), working with the IOC, UEFA, FIFA and ITIA on global integrity frameworks. He advises operators, regulators and governing bodies on integrity governance, sportsbook trading and regulated market strategy. <a href="index.html#contact" style="color: var(--gold);">Get in touch.</a></p>
+  </div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <span class="footer-brand">BetTrust Solutions</span>
+    <span class="footer-copy">&copy; 2026 BetTrust Solutions. All rights reserved.</span>
+  </div>
+</footer>
+</body>
+</html>
