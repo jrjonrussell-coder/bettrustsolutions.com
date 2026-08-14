@@ -61,13 +61,13 @@ p.tight{max-width:56ch}
 @media(max-width:820px){.g2,.g3{grid-template-columns:1fr}}
 
 /* pantheon */
-.pantheon{margin:6px 0 44px}
+.pantheon{margin:6px 0 38px}
 .pantheon svg{width:100%;height:auto;display:block}
 .pantheon .lintel{fill:var(--graphite)}
 .pantheon .cols rect{fill:var(--graphite);transition:fill .22s ease}
 .pantheon .cols rect.on{fill:var(--signal)}
 .plabels{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);
-  margin:14px 0 0;padding:0;gap:0}
+  margin:2px 0 0;padding:0;gap:0}
 .plabels button{width:100%;background:none;border:0;cursor:pointer;padding:6px 2px;
   font-family:"IBM Plex Mono",monospace;font-size:.62rem;letter-spacing:.13em;
   text-transform:uppercase;color:var(--steel);transition:color .22s ease}
