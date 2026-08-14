@@ -43,7 +43,7 @@ h1 em{font-style:normal;color:var(--signal)}
   margin:0 0 34px;color:var(--body);text-wrap:balance}
 .herogrid{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:48px;align-items:center}
 .heromark{justify-self:end;width:100%;max-width:250px;opacity:.92}
-.heromark svg{width:100%;height:auto;display:block}
+.heromark svg{width:100%;max-width:250px;height:auto;display:block}
 @media(max-width:900px){
   .herogrid{grid-template-columns:1fr}
   .heromark{display:none}
