@@ -108,6 +108,18 @@ p.tight{max-width:56ch}
   .prow ul{grid-template-columns:1fr}
 }
 
+/* problems */
+.probs{border-top:1px solid var(--hair)}
+.probs p{margin:0;padding:15px 0;border-bottom:1px solid var(--hair);
+  font-size:1rem;line-height:1.55;max-width:64ch;color:var(--graphite)}
+.formats{font-family:"IBM Plex Mono",monospace;font-size:.63rem;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--steel);line-height:2;max-width:62ch;
+  margin:0 0 32px}
+@media(max-width:760px){
+  .probs p{font-size:.95rem;padding:13px 0}
+  .formats{font-size:.55rem;letter-spacing:.07em;line-height:1.9}
+}
+
 /* services */
 .services{display:grid;grid-template-columns:1fr 1fr;gap:0 46px;border-top:1px solid var(--hair)}
 .svc{padding:22px 0;border-bottom:1px solid var(--hair)}
