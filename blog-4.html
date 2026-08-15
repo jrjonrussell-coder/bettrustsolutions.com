@@ -1,82 +1,62 @@
-html<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-GB">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Crowd Knows: Why Prediction Markets Outperform Bookmakers | BetTrust Solutions</title>
+<title>The Crowd Knows: Why Prediction Markets Outperform Bookmakers | StraightForecast</title>
 <meta name="description" content="Prediction markets processed $3.5 billion in volume during the 2024 US election. Most people citing them had no idea what they were looking at. A plain-English and academic analysis of how prediction markets work, why they beat bookmakers, and why the CFTC v. states legal battle keeps them in the news.">
-<meta name="keywords" content="prediction markets, Kalshi, Polymarket, CFTC, bookmakers, Betfair Exchange, wisdom of crowds, Kahneman Tversky, sports betting, betting integrity, Jonathan Russell, BetTrust Solutions">
-<link rel="canonical" href="https://www.bettrustsolutions.com/blog-4.html">
+<meta name="author" content="Jonathan Russell">
+<link rel="canonical" href="https://straightforecast.gg/blog-4.html">
+<meta property="og:site_name" content="StraightForecast">
 <meta property="og:title" content="The Crowd Knows: Why Prediction Markets Outperform Bookmakers">
-<meta property="og:description" content="Prediction markets processed $3.5 billion in volume during the 2024 US election. Most people citing them had no idea what they were looking at.">
-<meta property="og:url" content="https://www.bettrustsolutions.com/blog-4.html">
-<meta property="og:type" content="article">
-<meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "The Crowd Knows: Why Prediction Markets Outperform Bookmakers",
-  "author": { "@type": "Person", "name": "Jonathan Russell" },
-  "publisher": { "@type": "Organization", "name": "BetTrust Solutions", "url": "https://www.bettrustsolutions.com" },
-  "datePublished": "2026-04-13",
-  "description": "Prediction markets processed $3.5 billion in volume during the 2024 US election. Most people citing them had no idea what they were looking at."
-}
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-:root { --navy: #0d1b2a; --navy-mid: #152234; --silver: #c8d4e0; --gold: #b8965a; --gold-light: #d4ae72; --off-white: #f0f4f8; --text-muted: rgba(200,212,224,0.55); --font-display: 'Cormorant Garamond', Georgia, serif; --font-body: 'Jost', system-ui, sans-serif; }
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { background: var(--navy); color: var(--silver); font-family: var(--font-body); font-weight: 300; line-height: 1.8; min-height: 100vh; }
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(13,27,42,0.96); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(184,150,90,0.15); padding: 0 2rem; height: 64px; display: flex; align-items: center; }
-.nav-inner { max-width: 1200px; margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: space-between; }
-.nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
-.nav-brand { font-family: var(--font-display); font-size: 1.1rem; font-weight: 400; color: var(--off-white); letter-spacing: 0.05em; }
-.nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a { color: var(--silver); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
-.nav-links a:hover { color: var(--gold-light); }
-.article-wrap { max-width: 720px; margin: 0 auto; padding: 120px 2rem 6rem; }
-.back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--gold); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; margin-bottom: 3rem; opacity: 0.8; transition: opacity 0.2s; }
-.back-link:hover { opacity: 1; }
-.article-meta { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
-h1 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 300; color: var(--off-white); line-height: 1.2; margin-bottom: 0.75rem; }
-.article-byline { font-size: 0.82rem; color: var(--text-muted); border-top: 1px solid rgba(200,212,224,0.1); border-bottom: 1px solid rgba(200,212,224,0.1); padding: 1rem 0; margin-bottom: 3rem; letter-spacing: 0.05em; }
-.article-body p { margin-bottom: 1.6rem; font-size: 1.02rem; color: var(--silver); }
-.article-body h2 { font-family: var(--font-display); font-size: clamp(1.3rem, 2.5vw, 1.8rem); font-weight: 400; color: var(--off-white); margin: 3rem 0 1.25rem; line-height: 1.3; }
-.article-body strong { color: var(--off-white); font-weight: 500; }
-.article-body em { font-style: italic; color: var(--off-white); }
-.article-body .pullquote { border-left: 3px solid var(--gold); padding: 0.5rem 0 0.5rem 1.75rem; margin: 2.5rem 0; font-family: var(--font-display); font-size: 1.25rem; color: var(--off-white); line-height: 1.5; font-style: italic; }
-.article-footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(200,212,224,0.1); }
-.author-bio { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
-.author-bio strong { color: var(--silver); }
-footer { border-top: 1px solid rgba(200,212,224,0.1); padding: 2rem; text-align: center; }
-.footer-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; gap: 1rem; }
-.footer-brand { font-family: var(--font-display); font-size: 1rem; color: var(--silver); letter-spacing: 0.05em; }
-.footer-copy { font-size: 0.75rem; color: var(--text-muted); letter-spacing: 0.05em; }
-</style>
+<meta property="og:description" content="Prediction markets processed $3.5 billion in volume during the 2024 US election. Most people citing them had no idea what they were looking at. A plain-English and academic analysis of how prediction markets work, why they beat bookmakers, and why the CFTC v. states legal battle keeps them in the news.">
+<meta property="og:url" content="https://straightforecast.gg/blog-4.html">
+<meta property="og:image" content="https://straightforecast.gg/icon-512.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/icon-512.png" type="image/png">
+<link rel="apple-touch-icon" href="/icon-180.png">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css?v=2">
 </head>
 <body>
-<nav>
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><span class="nav-brand">BetTrust Solutions</span></a>
-    <ul class="nav-links">
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#credentials">Credentials</a></li>
-      <li><a href="index.html#services">Services</a></li>
-      <li><a href="blog.html">Writing</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-    </ul>
+<header>
+  <div class="wrap">
+    <a class="brand" href="/">
+      <svg width="30" height="30" viewBox="0 0 140 140" aria-hidden="true">
+        <defs>
+          <linearGradient id="ha" x1="1" x2="0"><stop offset="0" stop-color="#2B50D8" stop-opacity=".1"/><stop offset=".45" stop-color="#2B50D8" stop-opacity=".42"/><stop offset="1" stop-color="#2B50D8"/></linearGradient>
+          <linearGradient id="hb" x1="1" x2="0"><stop offset="0" stop-color="#24262A" stop-opacity=".1"/><stop offset=".45" stop-color="#24262A" stop-opacity=".42"/><stop offset="1" stop-color="#24262A"/></linearGradient>
+        </defs>
+        <rect x="34" y="76" width="60" height="12" fill="url(#ha)"/>
+        <rect x="28" y="98" width="60" height="12" fill="url(#hb)"/>
+        <rect x="98" y="42" width="12" height="80" fill="#24262A"/>
+        <circle cx="104" cy="42" r="18" fill="#24262A"/>
+        <circle cx="104" cy="42" r="7" fill="#F2F1EE"/>
+      </svg>
+      <span>Straight<i>Forecast</i></span>
+    </a>
+    <nav>
+      <a href="/#practice">Practice</a>
+      <a href="/#work">Work</a>
+      <a href="/#services">Services</a>
+      <a href="/#filings">Filings</a>
+      <a href="/blog.html">Writing</a>
+      <a href="/#contact">Contact</a>
+    </nav>
   </div>
-</nav>
-<div class="article-wrap">
-  <a href="blog.html" class="back-link">&larr; All writing</a>
-  <p class="article-meta">April 2026 &mdash; Market Structure</p>
-  <h1>The Crowd Knows: Why Prediction Markets Outperform Bookmakers</h1>
-  <p class="article-byline">By Jonathan Russell &mdash; Sports Betting &amp; Integrity Consultant</p>
-  <div class="article-body">
+</header>
+
+<div class="hero short">
+  <div class="wrap narrow">
+    <p class="mono">April 2026 &nbsp;&middot;&nbsp; Market Structure &nbsp;&middot;&nbsp; Archive</p>
+    <h1 class="article">The Crowd Knows: Why Prediction Markets Outperform Bookmakers</h1>
+    <p class="archivenote">Published under BetTrust Solutions, the practice’s former trading name. Retained unaltered as a record of the work.</p>
+  </div>
+</div>
+
+<article>
+  <div class="wrap narrow">
+
 
 <p>Prediction markets processed over $3.5 billion in volume during the 2024 US election cycle. Financial journalists cited Polymarket prices alongside polling aggregators. Political analysts used them as a live probability feed. Sports commentators referenced them as if they were fact. The attention is not accidental, and it is not going away. But most people quoting prediction market prices have only a partial understanding of what those prices actually represent, how they are produced, and where they break down. That gap matters, because a number misread is worse than no number at all.</p>
 
@@ -154,17 +134,19 @@ footer { border-top: 1px solid rgba(200,212,224,0.1); padding: 2rem; text-align:
 <p>Levitt, S.D. (2004). &ldquo;Why are gambling markets organised so differently from financial markets?&rdquo; <em>The Economic Journal</em>, 114(495), pp.223&ndash;246.</p>
 <p>Surowiecki, J. (2004). <em>The Wisdom of Crowds</em>. Doubleday.</p>
 <p>Tetlock, P.E. and Gardner, D. (2015). <em>Superforecasting: The Art and Science of Prediction</em>. Crown Publishers.</p>
-<p>Tversky, A. and Kahneman, D. (1992). &ldquo;Advances in prospect theory: cumulative representation of uncertainty.&rdquo; <em>Journal of Risk and Uncertainty</em>, 5(3), pp.297&ndash;323.</p>
+<p>Tversky, A. and Kahneman, D. (1992). &ldquo;Advances in prospect theory: cumulative representation of uncertainty.&rdquo; <em>Journal of Risk and Uncertainty</em>, 5(3), pp.297&ndash;323.</p
 
+    <div class="byline">
+      <p class="mono">Jonathan Russell</p>
+      <p>Founder of StraightForecast, an independent practice covering trading, markets, integrity, prediction and governance. Thirty years in regulated betting, including a decade as Global Head of Trading at Betway and three elected terms as Non-Executive Chair of the International Betting Integrity Association. <a href="/#contact">Get in touch.</a></p>
+    </div>
   </div>
-  <div class="article-footer">
-    <p class="author-bio"><strong>Jonathan Russell</strong> is a sports betting and integrity consultant with 30 years of experience in regulated betting markets. He served three elected terms as Non-Executive Chair of the International Betting Integrity Association (IBIA), working with the IOC, UEFA, FIFA and ITIA on global integrity frameworks. He advises operators, regulators and governing bodies on integrity governance, sportsbook trading and regulated market strategy. <a href="index.html#contact" style="color: var(--gold);">Get in touch.</a></p>
-  </div>
-</div>
+</article>
+
 <footer>
-  <div class="footer-inner">
-    <span class="footer-brand">BetTrust Solutions</span>
-    <span class="footer-copy">&copy; 2026 BetTrust Solutions. All rights reserved.</span>
+  <div class="wrap">
+    <p class="mono" style="margin:0">StraightForecast &copy; 2026 &nbsp;&middot;&nbsp; Jonathan Russell</p>
+    <p class="mono" style="margin:0"><a href="/blog.html">Writing</a> &nbsp;&middot;&nbsp; <a href="https://www.linkedin.com/in/jdrgbr">LinkedIn</a></p>
   </div>
 </footer>
 </body>

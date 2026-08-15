@@ -30,7 +30,15 @@ nav{display:flex;gap:26px}
 nav a{font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.14em;
   text-transform:uppercase;color:var(--steel);text-decoration:none}
 nav a:hover,nav a:focus-visible{color:var(--graphite)}
-@media(max-width:720px){nav{display:none}}
+@media(max-width:760px){
+  header{background:var(--paper);backdrop-filter:none}
+  header .wrap{flex-direction:column;align-items:flex-start;gap:8px;
+    padding-top:10px;padding-bottom:8px}
+  nav{gap:6px 16px;width:100%;flex-wrap:wrap}
+  nav a{white-space:nowrap;font-size:.58rem;letter-spacing:.1em}
+  .brand span{font-size:.98rem}
+  .brand svg{width:24px;height:24px}
+}
 
 /* hero */
 .hero{padding:76px 0 62px;border-bottom:1px solid var(--hair)}
@@ -138,6 +146,9 @@ article li{margin-bottom:9px}
 article a{color:var(--signal)}
 .pullquote{border-left:2px solid var(--signal);padding:4px 0 4px 22px;margin:32px 0;
   font-size:1.16rem;line-height:1.5;letter-spacing:-.018em;color:var(--graphite);font-weight:500}
+.archivenote{font-family:"IBM Plex Mono",monospace;font-size:.66rem;line-height:1.7;
+  letter-spacing:.02em;color:var(--steel);border-left:2px solid var(--hair);
+  padding-left:14px;max-width:52ch;margin:0}
 .byline{border-top:1px solid var(--hair);margin-top:46px;padding-top:22px}
 .byline p{font-size:.9rem}
 
@@ -158,4 +169,37 @@ footer a{color:inherit;text-decoration:none}
 @media(prefers-reduced-motion:no-preference){
   .reveal{opacity:0;transform:translateY(10px);animation:rise .7s cubic-bezier(.2,.7,.3,1) forwards}
   @keyframes rise{to{opacity:1;transform:none}}
+}
+
+
+/* ---- small screens ---- */
+@media(max-width:760px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  .hero{padding:44px 0 40px}
+  h1{font-size:clamp(1.85rem,8.6vw,2.5rem);line-height:1.08;
+    letter-spacing:-.032em;margin:12px 0 18px;max-width:none}
+  .lede{font-size:1.02rem;margin-bottom:26px;max-width:none}
+  .cta{padding:13px 20px;font-size:.66rem}
+  section{padding:44px 0}
+  h2{font-size:1.35rem;margin:10px 0 18px;max-width:none}
+  .mono{font-size:.6rem;letter-spacing:.14em}
+  p{margin-bottom:15px}
+  .grid{gap:22px}
+  .prow{padding:20px 0}
+  .prow h3{font-size:1.15rem}
+  .svc{padding:18px 0}
+  .piece{padding:18px 0}
+  .piece a.title{font-size:1rem}
+  .pantheon{margin:2px 0 26px}
+  .plabels button{font-size:.46rem;letter-spacing:.02em;padding:5px 1px}
+  article{padding:34px 0 52px}
+  article p{font-size:1rem;line-height:1.66}
+  .contact a.mail{font-size:1.15rem;word-break:break-word}
+  footer{padding:22px 0 30px}
+  footer .wrap{flex-direction:column;gap:8px}
+}
+@media(max-width:400px){
+  h1{font-size:1.72rem}
+  .plabels button{font-size:.42rem}
 }
